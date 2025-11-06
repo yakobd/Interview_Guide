@@ -65,7 +65,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
   const handleCall = async () => {
     setCallStatus(CallStatus.CONNECTING);
 
-    await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
+    await vapi.start(process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_FINAL, {
       variableValues: {
         username: userName,
         userid: userId,
@@ -120,7 +120,7 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
             <p
               key={latestMessage}
               className={cn(
-                "transition-opacity duration-500 opacity-0",
+                "transition-opacity duration-1000 opacity-0",
                 "animate-fadeIn opacity-1oo"
               )}
             >
